@@ -1,7 +1,14 @@
 .homepage {
-    min-height: 80vh; 
+    //min-height: 80vh;
+    margin: 2.2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: $font-oswald;
+
+    &__bg {
+        background-color: rgba(black, .2);
+        border-radius: 20px;
+        padding: 1rem 0.5rem;
+    }
 }

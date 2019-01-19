@@ -11,15 +11,17 @@ class Search extends React.Component {
         try {
             let queryQuestion = query.q ? query.q : null;
             let mediaType = query.media_type ? query.media_type : null;
+            let page = query.page ? query.page : '';
 
             let data = [];
-            data = queryQuestion && mediaType && (mediaType === 'image' || mediaType === 'audio') ? await axios.get(`https://images-api.nasa.gov/search?q=${queryQuestion}&media_type=${mediaType}`) : null;
+            data = queryQuestion && mediaType && (mediaType === 'image' || mediaType === 'audio') ? await axios.get(`https://images-api.nasa.gov/search?q=${queryQuestion}&media_type=${mediaType}${page && page.length > 0 && `&page=${page}`}`) : null;
 
             if(data && data.data && data.data.collection) return {
                 success: true,
                 data: data.data.collection,
                 queryQuestion,
-                mediaType
+                mediaType,
+                page
             }
 
             return {
@@ -41,10 +43,9 @@ class Search extends React.Component {
             data,
             queryQuestion,
             mediaType,
+            page,
             error,
         } = this.props;
-
-        console.log(this.props)
 
         if (error) return '';
 
@@ -61,6 +62,7 @@ class Search extends React.Component {
                     data={data}
                     queryQuestion={queryQuestion}
                     mediaType={mediaType}
+                    page={page}
                     isFooter={data && data.items && data.items.length > 0 ? true : false}
                 />
             </React.Fragment>
@@ -79,6 +81,7 @@ Search.propTypes = {
     }),
     queryQuestion: PropTypes.string,
     mediaType: PropTypes.string,
+    page: PropTypes.string,
     error: PropTypes.bool
 }
 

@@ -9,6 +9,7 @@ export default function SearchPage(props){
 		data,
 		queryQuestion,
 		mediaType,
+		page,
 		isFooter
 	} = props;
 
@@ -24,6 +25,9 @@ export default function SearchPage(props){
 					/>
 					<AssetsComponent 
 						data={data}
+						queryQuestion={queryQuestion}
+						page={page}
+						mediaType={mediaType}
 					/>
 				</div>
 			</div>
@@ -34,12 +38,33 @@ export default function SearchPage(props){
 SearchPage.propTypes = {
     data: PropTypes.shape({
         href: PropTypes.string,
-        items: PropTypes.arrayOf(PropTypes.object),
+        items: PropTypes.arrayOf(PropTypes.shape({
+			data: PropTypes.arrayOf(PropTypes.shape({
+				center: PropTypes.string,
+				date_created: PropTypes.string,
+				description: PropTypes.string,
+				description_508: PropTypes.string,
+				keywords: PropTypes.arrayOf(PropTypes.string),
+				media_type: PropTypes.string,
+				nasa_id: PropTypes.string,
+				secondary_creator: PropTypes.string,
+				title: PropTypes.string
+			})),
+			links: PropTypes.arrayOf(PropTypes.shape({
+				href: PropTypes.string,
+				rel: PropTypes.string,
+				render: PropTypes.string
+			})),
+			href: PropTypes.string,
+		})),
         links: PropTypes.arrayOf(PropTypes.object),
-        metadata: PropTypes.object,
+        metadata: PropTypes.shape({
+			total_hits: PropTypes.number
+		}),
         version: PropTypes.string
     }),
 	queryQuestion: PropTypes.string,
+	page: PropTypes.string,
 	isFooter: PropTypes.bool,
     mediaType: PropTypes.string
 }

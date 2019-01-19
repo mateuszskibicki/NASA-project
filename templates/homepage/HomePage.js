@@ -4,7 +4,7 @@ export default function HomePage(){
 	return (
 		<MainLayout>
 			<div className="homepage">
-				<div className="container text-center text-white">
+				<div className="container text-center text-white homepage__bg">
 					<h1 className="mb-1">NASA</h1>
 					<h2 className="mb-1">Mateusz Skibicki</h2>
 					<p className="lead mb-1">

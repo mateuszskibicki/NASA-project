@@ -46,7 +46,7 @@ class SearchInput extends React.Component {
 				<div className="col-12 col-sm-10 col-md-8 col-xl-6">
 					<h1 className="text-white text-center">NASA Search</h1>
 
-					<form className="form-search">
+					<form className="form-search" onSubmit={this.onSubmit}>
 
 						<div className="input-group mb-3">
 							<input
@@ -59,7 +59,7 @@ class SearchInput extends React.Component {
 								aria-describedby="search-button"
 							/>
 							<div className="input-group-append">
-								<button className="btn btn-white" type="button" id="search-button" onClick={this.onSubmit}>
+								<button className="btn btn-white" type="submit" id="search-button">
 									<i className="fas fa-search" />
 								</button>
 							</div>

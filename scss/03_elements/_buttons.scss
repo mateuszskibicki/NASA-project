@@ -9,3 +9,17 @@
         box-shadow: 0 0 3px 3px rgba($pomegranate, .3);
     }
 }
+
+.btn-white--navbar {
+    color: $alabaster-white;
+    background-color: none !important;
+    border: 1px solid rgba($alabaster-white, .3);
+    border-radius: 20px;
+    transition: .5s;
+    padding: 0.3rem 0.5rem;
+    &:hover {
+        transform: scale(1.05);
+        color: lighten($alabaster-white, 20%);
+        box-shadow: 0 0 3px 5px rgba($pomegranate, .2);
+    }
+}
