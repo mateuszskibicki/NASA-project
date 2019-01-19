@@ -1,0 +1,30 @@
+.navbar {
+    background-color: rgba(0, 0, 0, .5);
+
+    &-brand {
+        transition: .5s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icons {
+        display: inline-block;
+        text-decoration: none;
+        svg {
+            margin-right: 0.5rem;
+            color: $alabaster-white;
+            transition: .5s;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        font-size: 1.6rem;
+    }
+}

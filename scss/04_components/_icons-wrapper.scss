@@ -1,0 +1,24 @@
+.icons-wrapper {
+    a {
+        color: $alabaster-white;
+        text-decoration: none;
+        svg {
+            transition: .3s;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    &--big {
+        a {
+            font-size: 3rem;
+            margin: 0.5rem;
+        }
+    }
+    &--small {
+        a {
+            font-size: 1.5rem;
+            margin: 0.5rem;
+        }
+    }
+}

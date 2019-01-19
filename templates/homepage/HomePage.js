@@ -1,11 +1,45 @@
-export const HomePage = () => {
-  return (
-    <div>
-      <h1>Homepage</h1>
-    </div>
-  )
-}
+import { MainLayout } from "../../components/layout/MainLayout";
 
+export const HomePage = () => {
+	return (
+		<MainLayout isBackground>
+			<div className="homepage">
+				<div className="container text-center text-white">
+					<h1 className="mb-1">NASA</h1>
+					<h2 className="mb-1">Mateusz Skibicki</h2>
+					<p className="lead mb-1">
+						Technologies I used Next.js/ Node.js/ React.js/ Boostrap
+					</p>
+					<p className="lead mb-0 text-decoration-a-none">
+						Project based on documentation:{" "}
+						<a
+							href="https://jsainsburyplc.github.io/front-end-test/"
+							target="_blank"
+							
+						>
+							https://jsainsburyplc.github.io/front-end-test/
+						</a>
+					</p>
+					<div className="icons-wrapper icons-wrapper--big">
+						<a
+							href="https://github.com/mateuszskibicki/NASA-project"
+							target="_blank"
+						>
+							<i className="fab fa-github" />
+						</a>
+
+						<a
+							href="https://github.com/mateuszskibicki/NASA-project"
+							target="_blank"
+						>
+							<i class="fab fa-linkedin" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</MainLayout>
+	);
+};
 
 // import PropTypes from 'prop-types';
 // import dynamic from 'next/dynamic';
@@ -47,4 +81,3 @@ export const HomePage = () => {
 //     theDailyJournal: PropTypes.object,
 //     testimonials_tag: PropTypes.string,
 // }
-
