@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export const Navbar = () => {
 	return (
-		<nav class="navbar">
+		<nav className="navbar">
 			<Link href="/">
-				<a class="navbar-brand">
+				<a className="navbar-brand">
 					<img
 						src="/static/icons/icon-384x384.png"
 						width="35"
 						height="35"
-						class="d-inline-block align-top"
+						className="d-inline-block align-top"
 						alt="NASA"
 					/>
 				</a>
@@ -33,10 +33,10 @@ export const Navbar = () => {
 					</a>
 
 					<a
-						href="https://github.com/mateuszskibicki/NASA-project"
+						href="https://www.linkedin.com/in/mateusz-skibicki-web-dev/"
 						target="_blank"
 					>
-						<i class="fab fa-linkedin" />
+						<i className="fab fa-linkedin" />
 					</a>
 				</div>
 			</div>

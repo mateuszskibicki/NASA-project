@@ -9,8 +9,6 @@ export default class MyDocument extends Document {
                         //Manifest.json/icons/meta
                     }
                     <link rel="manifest" href="manifest.json" />
-                    <title>NASA project - Mateusz Skibicki</title>
-                    <meta name='description' content='NASA Project - Mateusz Skibicki - Next.js - Node.js - React.js' />
                     <meta name='keywords' content='NASA, nasa, next.js, node.js, react.js' />
                     <meta name="mobile-web-app-capable" content="yes" />
                     <meta name="apple-mobile-web-app-capable" content="yes" />

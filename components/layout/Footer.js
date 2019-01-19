@@ -2,16 +2,16 @@ import Link from "next/link";
 
 export const Footer = () => {
 	return (
-		<div class="footer py-3">
+		<div className="footer py-3">
 			<div className="text-center">
 				<Link href="/">
-					<img
-						src="/static/icons/icon-384x384.png"
-						width="80"
-						height="80"
-						class="m-auto"
-						alt="NASA"
-					/>
+					<div className="m-auto text-center">
+						<img
+							src="/static/icons/icon-384x384.png"
+							alt="NASA logo"
+							className="loader"
+						/>
+					</div>
 				</Link>
 				<div>
 					<small>NASA project - Mateusz Skibicki - 2019</small>
@@ -39,7 +39,7 @@ export const Footer = () => {
 						href="https://github.com/mateuszskibicki/NASA-project"
 						target="_blank"
 					>
-						<i class="fab fa-linkedin" />
+						<i className="fab fa-linkedin" />
 					</a>
 				</div>
 			</div>

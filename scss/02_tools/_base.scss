@@ -10,6 +10,13 @@
   overflow-x: hidden;
 }
 
+body {
+  background-image: url("../../static/images/main-bg2.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 /**
  * Custom scrollbar
  */
