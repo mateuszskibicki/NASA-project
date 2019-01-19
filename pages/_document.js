@@ -4,14 +4,20 @@ export default class MyDocument extends Document {
     render(){
         return (
             <html lang="en-UK">
-                {/* <Head>
-                    <link rel="manifest" href="/static/manifest.json" />
+                <Head>
+                    {
+                        //Manifest.json/icons/meta
+                    }
+                    <link rel="manifest" href="manifest.json" />
+                    <title>NASA project - Mateusz Skibicki</title>
+                    <meta name='description' content='NASA Project - Mateusz Skibicki - Next.js - Node.js - React.js' />
+                    <meta name='keywords' content='NASA, nasa, next.js, node.js, react.js' />
                     <meta name="mobile-web-app-capable" content="yes" />
                     <meta name="apple-mobile-web-app-capable" content="yes" />
-                    <meta name="application-name" content="in-touch" />
-                    <meta name="apple-mobile-web-app-title" content="in-touch" />
-                    <meta name="theme-color" content="#e84e0f" />
-                    <meta name="msapplication-navbutton-color" content="#e84e0f" />
+                    <meta name="application-name" content="NASA project - Mateusz Skibicki" />
+                    <meta name="apple-mobile-web-app-title" content="NASA project - Mateusz Skibicki" />
+                    <meta name="theme-color" content="#6B5B95" />
+                    <meta name="msapplication-navbutton-color" content="#6B5B95" />
                     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
                     <meta name="msapplication-starturl" content="/" />
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -31,7 +37,14 @@ export default class MyDocument extends Document {
                     <link rel="apple-touch-icon" type="image/png" sizes="96x96" href="/static/icons/icon-96x96.png" />
                     <link rel="icon" type="image/png" sizes="72x72" href="/static/icons/icon-72x72.png" />
                     <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/static/icons/icon-72x72.png" />
-                </Head> */}
+                    {
+                        //Bootstrap 4.2.1
+                    }
+                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" />
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" />
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous" />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />
