@@ -14,8 +14,8 @@ export default class MyDocument extends Document {
                     <meta name="apple-mobile-web-app-capable" content="yes" />
                     <meta name="application-name" content="NASA project - Mateusz Skibicki" />
                     <meta name="apple-mobile-web-app-title" content="NASA project - Mateusz Skibicki" />
-                    <meta name="theme-color" content="#6B5B95" />
-                    <meta name="msapplication-navbutton-color" content="#6B5B95" />
+                    <meta name="theme-color" content="#E84E0F" />
+                    <meta name="msapplication-navbutton-color" content="#E84E0F" />
                     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
                     <meta name="msapplication-starturl" content="/" />
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -55,12 +55,6 @@ export default class MyDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
-                    {
-                        //Bootstrap 4.2.1 JS files
-                    }
-                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" />
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" />
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous" />
                 </body>
             </html>
         )
