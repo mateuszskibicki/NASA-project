@@ -1,17 +1,9 @@
-# next-prismic-starter
-Starter Next.js with headless CMS Prismic and custom Express.js server
+# NASA Search project - Mateusz Skibicki
+## Technologies: Next.js/ Node.js/ React.js/ Boostrap
+Based on documentation: https://jsainsburyplc.github.io/front-end-test/
+Images: https://www.pexels.com
+Icons: https://fontawesome.com/
+Github: https://github.com/mateuszskibicki/NASA-project
+LinkedIn: https://www.linkedin.com/in/mateusz-skibicki-web-dev/
 
-#Why starter like this?
-
-Server Side Rendering (Next.js)
-
-Express.js with compression
-
-Headless CMS easy to use (Prismic)
-
-Easy to maintain file structure
-
-Helpers to get data from Prismic
-
-We can connect it with mongodb/graphql
-
+Seo friendly, dynamic, Next.js and public NASA api based project.
