@@ -1,77 +1,29 @@
-import React from 'react'
+import Head from "next/head";
+import { MainLayout } from "../components/layout/MainLayout";
 
-export default function _error() {
-  return (
-    <div>
-      <h1>error page</h1>
-    </div>
-  )
+export default function ErrorPage() {
+	return (
+		<MainLayout>
+			<Head>
+				<title>NASA project - 404 page</title>
+				<meta
+					name="description"
+					content="NASA Project - Mateusz Skibicki - Next.js - Node.js - React.js - 404 page"
+				/>
+			</Head>
+			<div className="container text-center text-white mt-4">
+				<img
+					src="/static/images/alien.png"
+					alt="Alien warning"
+					width="200px"
+					height="200px"
+				/>
+				<h1 className="display-1">404 error</h1>
+				<h2>
+					Oh no!! Some evil alien has stolen the data and I can't display this
+					page!
+				</h2>
+			</div>
+		</MainLayout>
+	);
 }
-
-
-//Custom error page
-// import React, { Component } from "react";
-// import PropTypes from 'prop-types';
-// import Prismic from "prismic-javascript";
-// import { PrismicConfig } from "../prismic-config/PrismicAPI";
-// import Head from 'next/head'
-// import dynamic from 'next/dynamic';
-
-// import { layoutHelper } from "../helpers/LayoutHelpers";
-// import { theDailyJournalHelper } from '../helpers/TheDailyJounalHelpers';
-// import { MainLayout } from "../features/layout/MainLayout";
-// const ErrorPage = dynamic(() => import('../features/error/ErrorPage'));
-
-// class ErrorPageContainer extends Component {
-//     static async getInitialProps() {
-//         try {
-//             const res = await Prismic.api(PrismicConfig.apiEndpoint, {
-//                 accessToken: PrismicConfig.apiAccessTokes
-//             });
-//             const json = await Promise.all([
-//                 res.query(Prismic.Predicates.at("document.type", "layout")),
-//                 res.query(Prismic.Predicates.at("document.type", "the-daily-journal")),
-//             ]);
-//             return {
-//                 ...layoutHelper(json[0]),
-//                 ...theDailyJournalHelper(json[1]),
-//             }
-//         } catch (err) {
-//             return { error: true };
-//         }
-//     }
-
-//     render() {
-//         const {
-//             navbar,
-//             footer,
-//             theDailyJournal
-//         } = this.props;
-
-//         return (
-//             <MainLayout
-//                 navbar={navbar}
-//                 footer={footer}
-//             >
-//                 <Head>
-//                     <title>In Touch Networks | Transforming the way businesses recruit and people develop</title>
-//                     <meta name='description' content="Upgrade your career & transform the way you connect | Exclusive consultant & non-executive director board-level roles | CPD accredited expert development"/>
-//                     <meta name='geo.region' content='ISO:3166-2:GB' />
-//                 </Head>
-//                 <ErrorPage theDailyJournal={theDailyJournal}/>
-//             </MainLayout>
-//         )
-//     }
-// }
-
-// ErrorPageContainer.propTypes = {
-//     footer: PropTypes.object,
-//     navbar: PropTypes.object,
-//     resourcesDefaultPage: PropTypes.object,
-//     resourcesDynamicPage: PropTypes.object,
-//     articlesList: PropTypes.array,
-//     testimonials: PropTypes.object,
-//     theDailyJournal: PropTypes.object
-// }
-
-// export default ErrorPageContainer;

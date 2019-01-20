@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import Link from 'next/link';
 
 export const AssetImage = props => {
     const {
@@ -12,7 +13,7 @@ export const AssetImage = props => {
 		<div className="col-12 col-sm-6 col-lg-4 mt-3 mb-4">
             <div className="card mx-1">
                 {
-                    links[0].href && links[0].href.length > 0 &&
+                    links[0].href &&
                     <div className="card__img" style={{backgroundImage: `url(${links[0].href})`}}/> 
                 }
                 <div className="card-body p-2">
@@ -22,7 +23,7 @@ export const AssetImage = props => {
                     {data[0].keywords && data[0].keywords.length > 0 && (
                         <p className="small mb-1">Keywords: | {data[0].keywords.map(keyword => keyword + ' | ')}</p>
                     )}
-                    <a href="#" className="btn btn-black">Read more...</a>
+                    <Link href={`/assets?media_type=${data[0].media_type}&nasa_id=${data[0].nasa_id}`}><a className="btn btn-black">Read more...</a></Link>
                 </div>
             </div>
         </div>

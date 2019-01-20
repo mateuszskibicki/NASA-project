@@ -1,0 +1,12 @@
+.assets {
+    background-color: rgba(0, 0, 0, .1);
+    color: $alabaster-white;
+
+    &__audio--description {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 15px;
+        padding: 2rem;
+        text-shadow: none;
+    }
+}
