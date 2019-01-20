@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// 1. Resources
+@import
+'01_resources/mq';
+
+// 2. Internal Tools
+@import
+'02_tools/colors-new',
+'02_tools/fonts',
+'02_tools/shadows',
+'02_tools/helpers',
+'02_tools/base';
+
+// 3. Objects
+@import
+'03_elements/buttons',
+'03_elements/input-radio',
+'03_elements/loader';
+
+// // 4. Components
+ @import
+ '04_components/navbar',
+ '04_components/footer',
+ '04_components/icons-wrapper',
+ '04_components/nprogress',
+ '04_components/form-search',
+ '04_components/alert',
+ '04_components/card',
+ '04_components/pagination',
+ '04_components/breadcrumb',
+ '04_components/main-layout';
+
+// // 5. Pages
+@import
+'05_pages/homepage',
+'05_pages/assets',
+'05_pages/search';

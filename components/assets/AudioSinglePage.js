@@ -4,7 +4,7 @@ import axios from 'axios';
 import moment from "moment";
 import Router from "next/router";
 import ReactAudioPlayer from 'react-audio-player';
-
+import { Loader } from '../common/loader/Loader'
 
 class AudioSinglePage extends React.Component {
 
@@ -62,12 +62,13 @@ class AudioSinglePage extends React.Component {
 					</h5>
 				)}
 				<div className="bg-white text-dark assets__audio--description">
-					{this.state.MP3url && 
+					{this.state.MP3url ? 
 						<ReactAudioPlayer
 							src={this.state.MP3url}
 							//autoPlay
 							controls
 						/>
+						: <Loader />
 					}
 					<p className="lead">{audioData.description}</p>
 				</div>
