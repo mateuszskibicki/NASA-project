@@ -10,8 +10,6 @@ export const AssetsComponent = props => {
 		mediaType
 	 } = props;
 
-	console.log(data);
-
 	if (!data || !data.items) return "";
 	if (data && data.items && data.items.length === 0) return (
         <React.Fragment>
@@ -25,7 +23,7 @@ export const AssetsComponent = props => {
 	return (
 		<div className="row">
 			<div aria-label="breadcrumb" className="m-auto">
-				<ol className="breadcrumb">
+				<ol className="breadcrumb mx-2">
 					<li className="breadcrumb-item active" aria-current="page">NASA database</li>
 					<li className="breadcrumb-item active" aria-current="page">Media type: {mediaType}</li>
 					<li className="breadcrumb-item active" aria-current="page">Query: {queryQuestion}</li>
@@ -34,10 +32,10 @@ export const AssetsComponent = props => {
 				</ol>
 			</div>
 
-			<div className="row">
-				{data && data.items && data.items.length > 0 && data.items.map(singleAsset => {
-					if(singleAsset && singleAsset.data[0] && singleAsset.data[0].media_type === 'image') return <AssetImage key={singleAsset.data.date_created} content={singleAsset}/>
-					if(singleAsset && singleAsset.data[0] && singleAsset.data[0].media_type === 'audio') return <AssetAudio key={singleAsset.data.date_created} content={singleAsset}/>
+			<div className="row justify-content-center text-center mt-4">
+				{data && data.items && data.items.length > 0 && data.items.map((singleAsset, index) => {
+					if(singleAsset && singleAsset.data[0] && singleAsset.data[0].media_type === 'image') return <AssetImage key={index} content={singleAsset}/>
+					if(singleAsset && singleAsset.data[0] && singleAsset.data[0].media_type === 'audio') return <AssetAudio key={index} content={singleAsset}/>
 				})}
 			</div>
 		</div>

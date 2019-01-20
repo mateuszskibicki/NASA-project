@@ -2,8 +2,9 @@
 // Default colours                                                     \\
 // ------------------------------------------------------------------ \\
 
-// ----- Brand colours ----- \\
+// ----- Main colours ----- \\
 $tangaroa: #03163D !default;
+$lime: #7dce94 !default;
 $pomegranate: #E84E0F !default;
 $pacific-blue: #0C93BC !default;
 $outer-space: #30353A !default;
@@ -22,14 +23,12 @@ $earls-green: #b2cd3d !default;
 
 
 // ------------------------------------------------------------------ \\
-// In Touch Network Brand Colours                                     \\
+// Primary Colours                                     \\
 // ------------------------------------------------------------------ \\
 
 $primary-color-1: $tangaroa !default;
 $primary-color-2: $pomegranate !default;
-// The secondary colour is designated to business to business when designing communications. It can be used with the primary-color-1 primary colour.
 $secondary-color: $pacific-blue !default;
-// The tertiary colour is for body copy, it should only be used sparingly such as in graphs or tables, in presentations only.
 $tertiary-color: $outer-space !default;
 
 $link-color: $primary-color-1 !default;

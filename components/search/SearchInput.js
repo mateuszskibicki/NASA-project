@@ -42,9 +42,9 @@ class SearchInput extends React.Component {
 		const { questionForm, error } = this.state;
 
 		return (
-			<div className="row justify-content-center mt-4 mb-4">
+			<div className="row justify-content-center mt-4 mb-4" id="searchForm">
 				<div className="col-12 col-sm-10 col-md-8 col-xl-6">
-					<h1 className="text-white text-center">NASA Search</h1>
+					<h1 className="text-white text-center text-shadow-close-heavy">NASA Search</h1>
 
 					<form className="form-search" onSubmit={this.onSubmit}>
 

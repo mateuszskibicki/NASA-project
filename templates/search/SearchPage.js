@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { MainLayout } from "../../components/layout/MainLayout";
 import SearchInput from '../../components/search/SearchInput';
 import { AssetsComponent } from '../../components/search/AssetsComponent';
+import { PaginationComponent } from '../../components/common/pagination/PaginationComponent'
 
 export default function SearchPage(props){
 
@@ -10,10 +11,9 @@ export default function SearchPage(props){
 		queryQuestion,
 		mediaType,
 		page,
+		onPageChange,
 		isFooter
 	} = props;
-
-	//console.log(queryQuestion, mediaType , data);
 
 	return (
 		<MainLayout isFooter={isFooter}>
@@ -29,6 +29,30 @@ export default function SearchPage(props){
 						page={page}
 						mediaType={mediaType}
 					/>
+					{
+						data && data.items && data.metadata && data.metadata.total_hits > 100 && (
+							<React.Fragment>
+								<div className="d-none d-sm-inline">
+									<PaginationComponent 
+										activePage={page ? Number(page) : 1}
+										itemsCountPerPage={100}
+										totalItemsCount={data.metadata.total_hits}
+										pageRangeDisplayed={5}
+										onChange={onPageChange}
+									/>
+								</div>
+								<div className="d-sm-none">
+									<PaginationComponent 
+										activePage={page ? Number(page) : 1}
+										itemsCountPerPage={100}
+										totalItemsCount={data.metadata.total_hits}
+										pageRangeDisplayed={3}
+										onChange={onPageChange}
+									/>
+								</div>
+							</React.Fragment>
+						)
+					}
 				</div>
 			</div>
 		</MainLayout>
@@ -65,6 +89,7 @@ SearchPage.propTypes = {
     }),
 	queryQuestion: PropTypes.string,
 	page: PropTypes.string,
+	onPageChange: PropTypes.func,
 	isFooter: PropTypes.bool,
     mediaType: PropTypes.string
 }

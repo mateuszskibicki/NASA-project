@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Head from 'next/head';
-
+import Router from 'next/router'; 
 import dynamic from 'next/dynamic';
+
 const SearchPage = dynamic(() => import("../templates/search/SearchPage"));
 
 class Search extends React.Component {
@@ -38,6 +39,24 @@ class Search extends React.Component {
         this.props.error && (window.location = '/404')
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (this.props.page !== nextProps.page) {
+            document
+            .getElementById("searchForm")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+                inline: "start"
+            });
+        }
+    }
+
+    onPageChange = (page) => {
+        const q = this.props.queryQuestion;
+        const mediaType = this.props.mediaType;
+        Router.push(`/search?q=${q}&media_type=${mediaType}&page=${page}`);
+    }
+
     render() {
         const {
             data,
@@ -52,7 +71,7 @@ class Search extends React.Component {
         return (
             <React.Fragment>
                 <Head>
-                    <title>NASA search</title>
+                    <title>NASA - Find interesting information</title>
                     <meta
                         name="description"
                         content="NASA Project - Search page"
@@ -63,6 +82,7 @@ class Search extends React.Component {
                     queryQuestion={queryQuestion}
                     mediaType={mediaType}
                     page={page}
+                    onPageChange={this.onPageChange}
                     isFooter={data && data.items && data.items.length > 0 ? true : false}
                 />
             </React.Fragment>

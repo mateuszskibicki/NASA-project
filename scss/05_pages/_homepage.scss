@@ -5,10 +5,28 @@
     justify-content: center;
     align-items: center;
     font-family: $font-oswald;
+    
+    &__logo {
+        width: 120px;
+        height: 120px;
+        animation: rotateHomepage 5s infinite linear;
+    }
 
-    &__bg {
-        background-color: rgba(black, .2);
-        border-radius: 20px;
-        padding: 1rem 0.5rem;
+    &__link {
+        transition: .2s;
+        text-shadow: 2px 4px 3px rgba($pomegranate, 0.1);
+        &:hover {
+            transform: scale(1.1);
+            text-shadow: 3px 5px 4px rgba($pomegranate, 0.4);
+        }
+    }
+}
+
+@keyframes rotateHomepage {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
     }
 }

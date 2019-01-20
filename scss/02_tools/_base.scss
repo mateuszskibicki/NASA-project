@@ -8,6 +8,8 @@
  html {
   box-sizing: border-box;
   overflow-x: hidden;
+  margin: auto;
+  width: 100%
 }
 
 body {
@@ -15,6 +17,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  overflow-x: hidden;
+  margin: auto;
+  width: 100%;
+  font-family: $font-oswald;
 }
 
 /**

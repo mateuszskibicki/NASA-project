@@ -17,11 +17,11 @@ export const Navbar = () => {
 
 			<div className="navbar__links">
 				<Link href="/">
-					<button className="btn btn-white--navbar mr-2">Home</button>
+					<button className="btn btn-white--navbar shadow-up-down mr-2">Home</button>
 				</Link>
 
 				<Link href="/search">
-					<button className="btn btn-white--navbar mr-2">Search</button>
+					<button className="btn btn-white--navbar shadow-up-down mr-2">Search</button>
 				</Link>
 
 				<div className="navbar__icons">

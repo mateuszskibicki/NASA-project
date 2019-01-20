@@ -18,6 +18,15 @@ export const Footer = () => {
 				</div>
 				<div>
 					<small>
+						Based on:{" "}
+						<a href="https://jsainsburyplc.github.io/front-end-test/" target="_blank">
+							https://jsainsburyplc.github.io/front-end-test/
+						</a>
+					</small>
+				</div>
+				<div></div>
+				<div>
+					<small>
 						Images:{" "}
 						<a href="https://www.pexels.com" target="_blank">
 							https://www.pexels.com
@@ -36,7 +45,7 @@ export const Footer = () => {
 					</a>
 
 					<a
-						href="https://github.com/mateuszskibicki/NASA-project"
+						href="https://www.linkedin.com/in/mateusz-skibicki-web-dev/"
 						target="_blank"
 					>
 						<i className="fab fa-linkedin" />
