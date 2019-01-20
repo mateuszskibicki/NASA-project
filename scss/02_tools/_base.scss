@@ -10,18 +10,20 @@
   overflow-x: hidden;
   margin: auto;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
+  height: 100%;
 }
 
 body {
   background-image: url("../../static/images/main-bg2.jpeg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
   margin: auto;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
+  height: 100%;
   font-family: $font-oswald;
 }
 
