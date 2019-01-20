@@ -16,8 +16,6 @@ Routing (pages folder):
 - /search - search page
 - /assets - single media page
 
-Inside server folder - main node.js server file - some additional logic (compression).
-
 Inside main pages foler - main validation.
 
 Inside templates folder - templates for each page.

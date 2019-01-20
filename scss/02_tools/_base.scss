@@ -9,7 +9,8 @@
   box-sizing: border-box;
   overflow-x: hidden;
   margin: auto;
-  width: 100%
+  width: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
   overflow-x: hidden;
   margin: auto;
   width: 100%;
+  min-height: 100%;
   font-family: $font-oswald;
 }
 
