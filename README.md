@@ -5,8 +5,7 @@
 ## Icons: https://fontawesome.com/
 ## Github: https://github.com/mateuszskibicki/NASA-project
 ## LinkedIn: https://www.linkedin.com/in/mateusz-skibicki-web-dev/
-
-# LIVE: https://nasa-project-qzgysldptj.now.sh/
+## LIVE deployed with Now (https://zeit.co/now): https://nasa-project-rwelmhukps.now.sh
 
 SEO friendly, dynamic, server-side rendering (Next.js) and public NASA api based project. You can find image and audio assets in NASA database.
 
