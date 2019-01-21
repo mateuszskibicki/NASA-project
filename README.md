@@ -7,6 +7,12 @@
 ## LinkedIn: https://www.linkedin.com/in/mateusz-skibicki-web-dev/
 ## LIVE deployed with Now (https://zeit.co/now): https://nasa-project-rwelmhukps.now.sh
 
+How to run locally?
+  - download repo
+  - npm i (or use yarn)
+  - npm run dev (to run DEVELOPMENT - Hot Module Replacement - mode on http://localhost:3000/)
+  - npm run build && npm run start (to run PRODUCTION mode on http://localhost:3000/)
+
 SEO friendly, dynamic, server-side rendering (Next.js) and public NASA api based project. You can find image and audio assets in NASA database.
 
 Routing (pages folder):
