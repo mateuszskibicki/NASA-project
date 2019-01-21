@@ -5,7 +5,7 @@
 ## Icons: https://fontawesome.com/
 ## Github: https://github.com/mateuszskibicki/NASA-project
 ## LinkedIn: https://www.linkedin.com/in/mateusz-skibicki-web-dev/
-## LIVE deployed with Now (https://zeit.co/now): https://nasa-project-rwelmhukps.now.sh
+## LIVE deployed with Now - (free so sometimes it goes 'sleep', you have to wait 30s till whole project wakes up) (https://zeit.co/now): https://nasa-project-rwelmhukps.now.sh
 
 How to run locally?
   - download repo
