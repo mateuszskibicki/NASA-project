@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar">
+		<div className="container m-auto p-0">
+			<nav className="navbar">
 			<Link href="/">
 				<a className="navbar-brand">
 					<img
@@ -41,5 +42,6 @@ export const Navbar = () => {
 				</div>
 			</div>
 		</nav>
+		</div>
 	);
 };

@@ -2,29 +2,30 @@
 // This file contains all BASE styles.
 // ------------------------------------------------------ \\
 
-/**
- * Set up a decent box model on the root element
- */
- html {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+
+html,
+body {
+  background-color: $grey-cold-dark;
+  font-family: $font-oswald;
+  width: auto;
   overflow-x: hidden;
-  margin: auto;
-  width: 100%;
   min-height: 100vh;
-  height: 100%;
+  padding-right: 0px !important;
+  margin: 0;
 }
 
 body {
   background-image: url("../../static/images/main-bg2.jpeg");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  overflow-x: hidden;
-  margin: auto;
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  font-family: $font-oswald;
+  background-position: center;
 }
 
 /**
@@ -33,12 +34,12 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $grey-light; 
+  background: rgba($grey-cold-dark, .4); 
 }
  
 /* Handle */
@@ -49,16 +50,6 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: darken($pomegranate, 10%); 
-}
-  
-/**
-* Make all elements from the DOM inherit from the parent box-sizing
-* Since `*` has a specificity of 0, it does not override the `html` value
-* making all elements inheriting from the root box-sizing value
-* See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-*/
-*, *::before, *::after {
-  box-sizing: inherit;
 }
 
 // /*------------------------------------*\
