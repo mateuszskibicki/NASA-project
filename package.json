@@ -4,9 +4,11 @@
   "description": "NASA project - Mateusz Skibicki",
   "main": "server.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server/server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server/server.js",
+    "export": "next export",
+    "start-live": "next start -p 80"
   },
   "keywords": [],
   "author": "Mateusz Skibicki",
