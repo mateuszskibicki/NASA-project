@@ -6,6 +6,7 @@
 ## Github: https://github.com/mateuszskibicki/NASA-project
 ## LinkedIn: https://www.linkedin.com/in/mateusz-skibicki-web-dev/
 ## LIVE deployed with Now - (free so sometimes it goes 'sleep', you have to wait 30s till whole project wakes up) (https://zeit.co/now): https://nasa-project-rwelmhukps.now.sh
+## LIVE deployed with Heroku - https://nasa-project-next.herokuapp.com/ - same like with now, if it doesn't work, please wait 30s
 
 How to run locally?
   - download repo
