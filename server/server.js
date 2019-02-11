@@ -5,6 +5,7 @@ const next = require('next')
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = routes.getRequestHandler(app);
+const port = process.env.PORT || 5000;
 
 
 app.prepare()
@@ -25,9 +26,9 @@ app.prepare()
         })
 
         // Listen port 3000
-        server.listen(3000, (err) => {
+        server.listen(port, (err) => {
             if (err) throw err
-            console.log('> Ready on http://localhost:3000')
+            console.log('> Ready on port: ' + port)
         })
     })
     .catch((ex) => {
