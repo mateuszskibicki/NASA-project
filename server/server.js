@@ -20,6 +20,11 @@ app.prepare()
             return res.status(200).json({ success: true })
         })
 
+        // Custom API endpoints
+        server.get('/api/test1', (req, res) => {
+            return res.status(200).json({ success: 'test1' })
+        })
+
         // Next.js
         server.get('*', async (req, res) => {
             return handle(req, res)
