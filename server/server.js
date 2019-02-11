@@ -1,25 +1,33 @@
 const express = require('express')
+const routes = require('./routes')
 const compression = require('compression')
 const next = require('next')
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
-const handle = app.getRequestHandler()
-const port = process.env.PORT || 3000;
+const handle = routes.getRequestHandler(app);
 
 
 app.prepare()
     .then(() => {
         const server = express()
-        //GZIP
+        
+        // Middleware
         server.use(compression())
 
-        server.get('*', (req, res) => {
+        // Custom API endpoints
+        server.get('/api/test', (req, res) => {
+            return res.status(200).json({ success: true })
+        })
+
+        // Next.js
+        server.get('*', async (req, res) => {
             return handle(req, res)
         })
 
-        server.listen(port, (err) => {
+        // Listen port 3000
+        server.listen(3000, (err) => {
             if (err) throw err
-            console.log(`Port: ${port}`)
+            console.log('> Ready on http://localhost:3000')
         })
     })
     .catch((ex) => {

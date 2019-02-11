@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 const AssetsPage = dynamic(() => import("../templates/assets/AssetsPage"));
 
 class Assets extends React.Component {
-	static async getInitialProps({ query }) {
+	static async getInitialProps({ query, req }) {
 		try {
 			let nasaID = query.nasa_id ? query.nasa_id : null;
 			let mediaType = query.media_type ? query.media_type : null;

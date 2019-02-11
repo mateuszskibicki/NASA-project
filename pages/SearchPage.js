@@ -8,7 +8,7 @@ const SearchPage = dynamic(() => import("../templates/search/SearchPage"));
 
 class Search extends React.Component {
 
-    static async getInitialProps({query}) {
+    static async getInitialProps({ query, req }) {
         try {
             let queryQuestion = query.q ? query.q : null;
             let mediaType = query.media_type ? query.media_type : null;
