@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "NASA project - Mateusz Skibicki",
   "main": "server.js",
+  "engines": {
+    "node": "8.9.4"
+  },
   "scripts": {
     "dev": "node server/server.js",
     "build": "next build",
