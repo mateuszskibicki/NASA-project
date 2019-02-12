@@ -1,5 +1,5 @@
 const express = require('express')
-const routes = require('./routes')
+const routes = require('./server/routes')
 const compression = require('compression')
 const next = require('next')
 const dev = process.env.NODE_ENV !== 'production'
@@ -31,9 +31,9 @@ app.prepare()
         })
 
         // Listen port 3000
-        server.listen(port, (err) => {
+        return server.listen(port, (err) => {
             if (err) throw err
-            console.log('> Ready on port: ' + port)
+            return console.log('> Ready on port: ' + port)
         })
     })
     .catch((ex) => {
