@@ -9,8 +9,8 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js -p $PORT",
-    "prestart": "node ./prestart.js",
+    "start": "NODE_ENV=production NPM_CONFIG_PRODUCTION=false node server.js -p $PORT",
+    "prestart": "node ./prestart.js && next build",
     "export": "next export",
     "start-live": "next start -p 80"
   },
