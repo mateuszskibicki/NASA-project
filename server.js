@@ -31,9 +31,9 @@ app.prepare()
         })
 
         // Listen port 3000
-        return server.listen(port, (err) => {
+       server.listen(port, (err) => {
             if (err) throw err
-            return console.log('> Ready on port: ' + port)
+            console.log('> Ready on port: ' + port)
         })
     })
     .catch((ex) => {
