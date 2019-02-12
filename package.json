@@ -4,13 +4,13 @@
   "description": "NASA project - Mateusz Skibicki",
   "main": "server.js",
   "engines": {
-    "node": "8.9.4"
+    "node": "10.x"
   },
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node server.js -p $PORT",
     "build": "next build",
-    "start": "NODE_ENV=production NPM_CONFIG_PRODUCTION=false node server.js -p $PORT",
-    "prestart": "node ./prestart.js && next build",
+    "start": "node server.js -p $PORT",
+    "heroku-postbuild": "next build",
     "export": "next export",
     "start-live": "next start -p 80"
   },
