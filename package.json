@@ -10,7 +10,7 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "heroku-postbuild": "next build && NODE_ENV=production node server.js",
+    "heroku-postbuild": "NODE_ENV=production npm install && npm run build && npm run start",
     "export": "next export",
     "start-live": "next start -p 80"
   },
